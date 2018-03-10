@@ -115,7 +115,7 @@ class PlaceTableViewController: UITableViewController {
             }
             
             guard let selectedPlaceCell = sender as? PlaceTableViewCell else {
-                fatalError("Unexpected sender: \(sender)")
+                fatalError("Unexpected sender: \(String(describing: sender))")
             }
             
             guard let indexPath = tableView.indexPath(for: selectedPlaceCell) else {
@@ -126,7 +126,7 @@ class PlaceTableViewController: UITableViewController {
             onePlaceViewController.place = selectedPlace
             
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
 
