@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92563EC2055AD7900A660AE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92563EB2055AD7900A660AE /* CardView.swift */; };
 		D9CB4CF620545335008DB140 /* OnePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */; };
 		D9DE5371205112460093B7D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE5370205112460093B7D3 /* AppDelegate.swift */; };
 		D9DE5376205112460093B7D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DE5374205112460093B7D3 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D92563EB2055AD7900A660AE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePlaceViewController.swift; sourceTree = "<group>"; };
 		D9DE536D205112460093B7D3 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DE5370205112460093B7D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		D9DE536F205112460093B7D3 /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				D92563EB2055AD7900A660AE /* CardView.swift */,
 				D9DE5374205112460093B7D3 /* Main.storyboard */,
 				D9DE5370205112460093B7D3 /* AppDelegate.swift */,
 				D9DE53902051128E0093B7D3 /* PlaceTableViewController.swift */,
@@ -212,6 +215,7 @@
 				D9DE5371205112460093B7D3 /* AppDelegate.swift in Sources */,
 				D9CB4CF620545335008DB140 /* OnePlaceViewController.swift in Sources */,
 				D9DE53912051128E0093B7D3 /* PlaceTableViewController.swift in Sources */,
+				D92563EC2055AD7900A660AE /* CardView.swift in Sources */,
 				D9DE5393205116120093B7D3 /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
