@@ -156,7 +156,7 @@ class PlaceTableViewController: UITableViewController {
         }
         
         if let tempPlace = Place(name: "Pryamids", photo: UIImage(named: "pryamid"),
-                                 description: "These are the great Pryamids in Eygpt.") {
+                                 description: "Built during a time when Egypt was one of the richest and most powerful civilizations in the world, the pyramids—especially the Great Pyramids of Giza—are some of the most magnificent man-made structures in history. Their massive scale reflects the unique role that the pharaoh, or king, played in ancient Egyptian society. Though pyramids were built from the beginning of the Old Kingdom to the close of the Ptolemaic period in the fourth century A.D.") {
             places += [tempPlace]
         } else {
             fatalError("Unable to instantiate place Pryamid")

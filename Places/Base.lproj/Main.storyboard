@@ -6,8 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,33 +74,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-Hu-0i4">
-                                <rect key="frame" x="16" y="79" width="343" height="315"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5OG-9h-Qbo">
+                                <rect key="frame" x="16" y="75" width="343" height="581"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcs-eI-iOd">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="This is a Default Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcs-eI-iOd">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="53.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-lT-v1W">
-                                        <rect key="frame" x="0.0" y="20.5" width="343" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JqI-Zn-KEQ">
-                                        <rect key="frame" x="0.0" y="41" width="343" height="274"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waterfall" translatesAutoresizingMaskIntoConstraints="NO" id="JqI-Zn-KEQ">
+                                        <rect key="frame" x="0.0" y="61.5" width="343" height="271"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-lT-v1W">
+                                        <rect key="frame" x="0.0" y="340.5" width="343" height="240.5"/>
+                                        <string key="text">Built during a time when Egypt was one of the richest and most powerful civilizations in the world, the pyramids—especially the Great Pyramids of Giza—are some of the most magnificent man-made structures in history. Their massive scale reflects the unique role that the pharaoh, or king, played in ancient Egyptian society. Though pyramids were built from the beginning of the Old Kingdom to the close of the Ptolemaic period in the fourth century A.D.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Dh-Hu-0i4" firstAttribute="leading" secondItem="lzo-7W-m3Y" secondAttribute="leadingMargin" id="7ke-7e-E9f"/>
-                            <constraint firstItem="9Dh-Hu-0i4" firstAttribute="top" secondItem="pRc-X1-LZr" secondAttribute="top" constant="15" id="GcG-oG-RK2"/>
-                            <constraint firstItem="pRc-X1-LZr" firstAttribute="bottom" secondItem="9Dh-Hu-0i4" secondAttribute="bottom" constant="273" id="YRP-hD-h5M"/>
-                            <constraint firstItem="9Dh-Hu-0i4" firstAttribute="trailing" secondItem="lzo-7W-m3Y" secondAttribute="trailingMargin" id="ud5-yi-WRG"/>
+                            <constraint firstAttribute="trailing" secondItem="5OG-9h-Qbo" secondAttribute="trailing" constant="16" id="EZ8-01-DvN"/>
+                            <constraint firstItem="pRc-X1-LZr" firstAttribute="bottom" secondItem="5OG-9h-Qbo" secondAttribute="bottom" constant="11" id="Qv1-wz-LPF"/>
+                            <constraint firstItem="5OG-9h-Qbo" firstAttribute="leading" secondItem="pRc-X1-LZr" secondAttribute="leading" constant="16" id="gev-e7-G9r"/>
+                            <constraint firstItem="5OG-9h-Qbo" firstAttribute="top" secondItem="pRc-X1-LZr" secondAttribute="top" constant="11" id="jm9-uF-uE0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pRc-X1-LZr"/>
                     </view>
@@ -112,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlH-Fd-EUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650" y="133"/>
+            <point key="canvasLocation" x="2647.1999999999998" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="czJ-AL-yLf">
@@ -135,5 +136,6 @@
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
+        <image name="waterfall" width="387" height="290"/>
     </resources>
 </document>
