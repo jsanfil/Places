@@ -8,25 +8,24 @@
 
 import UIKit
 import os
+import Alamofire
+import AlamofireObjectMapper
 
 class PlaceTableViewController: UITableViewController {
 
     //MARK: Properties
-    var places = [Place]()
+    // var places = [Place]()
+    var places = [RPlace]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load the sample data.
-        loadSampleData()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // loadSampleData()
+        print("in viewDidLoad() before fetchData()")
+        fetchData()
     }
-
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,6 +38,7 @@ class PlaceTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("in tableView: numberOfRowsInSection:", places.count)
         return places.count
     }
 
@@ -132,6 +132,7 @@ class PlaceTableViewController: UITableViewController {
 
     
     //MARK: - Private Functions
+    /*
     private func loadSampleData() {
         
         if let tempPlace = Place(name: "Cool Bridge", photo: UIImage(named: "bridge"),
@@ -175,8 +176,27 @@ class PlaceTableViewController: UITableViewController {
         } else {
             fatalError("Unable to instantiate place waterfall")
         }
-
-
     }
+    */
 
+    // Fetch the table data from the server
+    func fetchData(){
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let apiUrl = "http://localhost:3000/adventures"
+        Alamofire.request(apiUrl).validate().responseArray() { (response: DataResponse<[RPlace]>) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            switch response.result {
+            case .success:
+                self.places = response.result.value ?? []
+                for place in self.places {
+                    print(place.name ?? "")
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

@@ -10,7 +10,8 @@ import UIKit
 
 class OnePlaceViewController: UIViewController {
     
-    var place: Place?
+    // var place: Place?
+    var place: RPlace?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
