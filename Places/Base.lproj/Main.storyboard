@@ -96,13 +96,13 @@
                                 <rect key="frame" x="16" y="75" width="343" height="581"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="This is a Default Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcs-eI-iOd">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="32.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waterfall" translatesAutoresizingMaskIntoConstraints="NO" id="JqI-Zn-KEQ">
-                                        <rect key="frame" x="0.0" y="61.5" width="343" height="271"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="343" height="292"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-lT-v1W">
                                         <rect key="frame" x="0.0" y="340.5" width="343" height="240.5"/>

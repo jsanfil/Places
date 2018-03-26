@@ -7,6 +7,7 @@ target 'Places' do
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.1'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'Kingfisher', '~> 4.0'
   
 
   # Pods for Places

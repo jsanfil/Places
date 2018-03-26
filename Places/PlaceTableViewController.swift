@@ -10,6 +10,7 @@ import UIKit
 import os
 import Alamofire
 import AlamofireObjectMapper
+import Kingfisher
 
 class PlaceTableViewController: UITableViewController {
 
@@ -55,7 +56,9 @@ class PlaceTableViewController: UITableViewController {
         let place = places[indexPath.row]
 
         cell.nameLabel.text = place.name
-        cell.photoImageView.image = place.photo
+        // cell.photoImageView.image = place.photo
+        let url = URL(string: "https://s3-us-west-2.amazonaws.com/com.jsanfildev.images/bridge.jpg")!
+        cell.photoImageView.kf.setImage(with: url)
         cell.descLabel.text = place.description
 
         return cell
