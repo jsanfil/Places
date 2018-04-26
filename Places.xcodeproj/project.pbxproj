@@ -10,6 +10,7 @@
 		63082C2516F04541B42AA82D /* Pods_PlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD9A6DF37787867CFC0DD55 /* Pods_PlacesTests.framework */; };
 		6AACBDEDD5D69997E4C04BD9 /* Pods_Places.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660A1924AB32D8DAD23795A8 /* Pods_Places.framework */; };
 		D92563EC2055AD7900A660AE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92563EB2055AD7900A660AE /* CardView.swift */; };
+		D93AFC4820903FE800BBE580 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93AFC4720903FE800BBE580 /* PostViewController.swift */; };
 		D9611D34205EE71500BBE932 /* RPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9611D33205EE71500BBE932 /* RPlace.swift */; };
 		D9CB4CF620545335008DB140 /* OnePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */; };
 		D9DE5371205112460093B7D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE5370205112460093B7D3 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		BEFBA222FF7274C84A8AF41A /* Pods-Places.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places.release.xcconfig"; path = "Pods/Target Support Files/Pods-Places/Pods-Places.release.xcconfig"; sourceTree = "<group>"; };
 		CD0DC3594432FCB64BDDE1D3 /* Pods-PlacesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlacesTests/Pods-PlacesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D92563EB2055AD7900A660AE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D93AFC4720903FE800BBE580 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		D9611D33205EE71500BBE932 /* RPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPlace.swift; sourceTree = "<group>"; };
 		D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePlaceViewController.swift; sourceTree = "<group>"; };
 		D9DE536D205112460093B7D3 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 		D9DE536F205112460093B7D3 /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				D93AFC4720903FE800BBE580 /* PostViewController.swift */,
 				D92563EB2055AD7900A660AE /* CardView.swift */,
 				D9DE5374205112460093B7D3 /* Main.storyboard */,
 				D9DE5370205112460093B7D3 /* AppDelegate.swift */,
@@ -367,6 +370,7 @@
 				D9DE53912051128E0093B7D3 /* PlaceTableViewController.swift in Sources */,
 				D92563EC2055AD7900A660AE /* CardView.swift in Sources */,
 				D9DE5393205116120093B7D3 /* PlaceTableViewCell.swift in Sources */,
+				D93AFC4820903FE800BBE580 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

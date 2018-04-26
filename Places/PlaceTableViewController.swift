@@ -56,8 +56,8 @@ class PlaceTableViewController: UITableViewController {
         let place = places[indexPath.row]
 
         cell.nameLabel.text = place.name
-        // cell.photoImageView.image = place.photo
-        let url = URL(string: "https://s3-us-west-2.amazonaws.com/com.jsanfildev.images/bridge.jpg")!
+        // cell.photoImageView.image = UIImage(named: place.defaultImage ?? "paris.jpg")
+        let url = URL(string: "http://localhost:3000/images/" + (place.defaultImage ?? "paris.jpg"))
         cell.photoImageView.kf.setImage(with: url)
         cell.descLabel.text = place.description
 
@@ -109,8 +109,8 @@ class PlaceTableViewController: UITableViewController {
 
         switch(segue.identifier ?? "") {
             
-        case "AddItem":
-            os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+        case "newPostSegue":
+            os_log("Adding a new Post", log: OSLog.default, type: .debug)
             
         case "ShowDetail":
             guard let onePlaceViewController = segue.destination as? OnePlaceViewController else {

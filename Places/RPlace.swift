@@ -13,14 +13,27 @@ import ObjectMapper
 class RPlace: Mappable {
     var name: String?
     var description: String?
-    var photo: UIImage?
+    var author: String?
+    var access: String?
+    var defaultImage: String?
+    var category: String?
+    var images: [String] = []
+    var location: [Float] = []
+    var rating: Float?
     
     required init?(map: Map){
-        self.photo = UIImage(named: "defaultPhoto")
+        self.defaultImage = "defaultPhoto"
     }
     
     func mapping(map: Map) {
         name <- map["name"]
         description <- map["description"]
+        author <- map["author"]
+        access <- map["access"]
+        defaultImage <- map["defaultImage"]
+        category <- map["category"]
+        images <- map["images"]
+        location <- map["location"]
+        rating <- map["rating"]
     }
 }

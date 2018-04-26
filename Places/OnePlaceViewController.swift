@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class OnePlaceViewController: UIViewController {
     
@@ -16,19 +17,38 @@ class OnePlaceViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set up views if editing an existing Meal.
+        // Set up views if editing an existing place.
         if let place = place {
             nameLabel.text = place.name
             descLabel.text = place.description
-            photoImage.image = place.photo
+            // photoImage.image = UIImage(named: place.defaultImage ?? "defaultPhoto")
+            let url = URL(string: "http://localhost:3000/images/" + (place.defaultImage ?? "paris.jpg"))
+            photoImage.kf.setImage(with: url)
+
         }
 
     }
 
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+        let isPresentingInAddMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("The ViewController is not inside a navigation controller.")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
