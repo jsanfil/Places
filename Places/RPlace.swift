@@ -17,12 +17,15 @@ class RPlace: Mappable {
     var access: String?
     var defaultImage: String?
     var category: String?
-    var images: [String] = []
-    var location: [Float] = []
+    var images: [String]?
+    var location: [Float]?
     var rating: Float?
     
-    required init?(map: Map){
+    required init(map: Map){
         self.defaultImage = "defaultPhoto"
+    }
+    
+    init () {
     }
     
     func mapping(map: Map) {

@@ -10,13 +10,11 @@ import UIKit
 
 class PostViewController: UITableViewController {
 
-    var data: RPlace!
-    
-
+    var place = RPlace()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint("SettingsViewController viewDidLoad():", data)
+        debugPrint("SettingsViewController viewDidLoad():", place)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,7 +26,7 @@ class PostViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "nameSegue" {
             let destination = segue.destination as! PostViewController // Change to the child view controller
-            destination.data = data
+            destination.place = place
         }
     }
     
@@ -38,6 +36,6 @@ class PostViewController: UITableViewController {
     }
     
     private func updateViewData() {
-        print("In updateViewData:", data)
+        print("In updateViewData:", place)
     }
 }

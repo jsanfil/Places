@@ -111,6 +111,11 @@ class PlaceTableViewController: UITableViewController {
             
         case "newPostSegue":
             os_log("Adding a new Post", log: OSLog.default, type: .debug)
+            guard let destinationViewController = segue.destination as? PostViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            // create an empty place object and send it to the Post viewController
+            destinationViewController.place = RPlace()
             
         case "ShowDetail":
             guard let onePlaceViewController = segue.destination as? OnePlaceViewController else {

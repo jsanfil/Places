@@ -143,7 +143,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ymv-uc-sIx">
                             <connections>
-                                <segue destination="HTk-Ot-9KT" kind="show" id="ecF-Mc-3qb"/>
+                                <segue destination="zRQ-OB-kPM" kind="show" identifier="editPostSegue" id="xpZ-b1-x1F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -193,7 +193,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ty7-lD-eTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2666" y="516"/>
+            <point key="canvasLocation" x="2546" y="700"/>
         </scene>
         <!--Settings-->
         <scene sceneID="pcR-ec-7C4">
@@ -467,7 +467,7 @@
         <image name="waterfall" width="387" height="290"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="clI-pd-QIu"/>
+        <segue reference="xpZ-b1-x1F"/>
         <segue reference="52U-vL-ysT"/>
     </inferredMetricsTieBreakers>
 </document>

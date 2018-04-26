@@ -121,12 +121,12 @@
 		D9DE536F205112460093B7D3 /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				D93AFC4720903FE800BBE580 /* PostViewController.swift */,
 				D92563EB2055AD7900A660AE /* CardView.swift */,
 				D9DE5374205112460093B7D3 /* Main.storyboard */,
 				D9DE5370205112460093B7D3 /* AppDelegate.swift */,
 				D9DE53902051128E0093B7D3 /* PlaceTableViewController.swift */,
 				D9DE5392205116120093B7D3 /* PlaceTableViewCell.swift */,
+				D93AFC4720903FE800BBE580 /* PostViewController.swift */,
 				D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */,
 				D9DE539420520DFF0093B7D3 /* Place.swift */,
 				D9611D33205EE71500BBE932 /* RPlace.swift */,
