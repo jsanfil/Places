@@ -196,6 +196,7 @@ class PlaceTableViewController: UITableViewController {
             switch response.result {
             case .success:
                 self.places = response.result.value ?? []
+                print(response.result.value)
                 for place in self.places {
                     print(place.name ?? "")
                 }

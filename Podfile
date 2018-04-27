@@ -8,8 +8,8 @@ target 'Places' do
   pod 'ObjectMapper', '~> 3.1'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'Kingfisher', '~> 4.0'
+  pod 'Cosmos', '~> 15.0'
   
-
   # Pods for Places
 
   target 'PlacesTests' do

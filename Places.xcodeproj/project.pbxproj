@@ -12,6 +12,8 @@
 		D92563EC2055AD7900A660AE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92563EB2055AD7900A660AE /* CardView.swift */; };
 		D93AFC4820903FE800BBE580 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93AFC4720903FE800BBE580 /* PostViewController.swift */; };
 		D9611D34205EE71500BBE932 /* RPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9611D33205EE71500BBE932 /* RPlace.swift */; };
+		D99BAB7E2093B7DE00C0F499 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99BAB7D2093B7DE00C0F499 /* CategoryTableViewController.swift */; };
+		D99BAB802093BD9400C0F499 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99BAB7F2093BD9400C0F499 /* CategoryTableViewCell.swift */; };
 		D9CB4CF620545335008DB140 /* OnePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */; };
 		D9DE5371205112460093B7D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE5370205112460093B7D3 /* AppDelegate.swift */; };
 		D9DE5376205112460093B7D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DE5374205112460093B7D3 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		D92563EB2055AD7900A660AE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D93AFC4720903FE800BBE580 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		D9611D33205EE71500BBE932 /* RPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPlace.swift; sourceTree = "<group>"; };
+		D99BAB7D2093B7DE00C0F499 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		D99BAB7F2093BD9400C0F499 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D9CB4CF520545335008DB140 /* OnePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePlaceViewController.swift; sourceTree = "<group>"; };
 		D9DE536D205112460093B7D3 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DE5370205112460093B7D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 			children = (
 				D92563EB2055AD7900A660AE /* CardView.swift */,
 				D9DE5374205112460093B7D3 /* Main.storyboard */,
+				D99BAB7D2093B7DE00C0F499 /* CategoryTableViewController.swift */,
+				D99BAB7F2093BD9400C0F499 /* CategoryTableViewCell.swift */,
 				D9DE5370205112460093B7D3 /* AppDelegate.swift */,
 				D9DE53902051128E0093B7D3 /* PlaceTableViewController.swift */,
 				D9DE5392205116120093B7D3 /* PlaceTableViewCell.swift */,
@@ -197,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Joe Sanfilippo";
 				TargetAttributes = {
 					D9DE536C205112460093B7D3 = {
@@ -308,6 +314,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Places/Pods-Places-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -315,6 +322,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -368,6 +376,8 @@
 				D9DE5371205112460093B7D3 /* AppDelegate.swift in Sources */,
 				D9CB4CF620545335008DB140 /* OnePlaceViewController.swift in Sources */,
 				D9DE53912051128E0093B7D3 /* PlaceTableViewController.swift in Sources */,
+				D99BAB802093BD9400C0F499 /* CategoryTableViewCell.swift in Sources */,
+				D99BAB7E2093B7DE00C0F499 /* CategoryTableViewController.swift in Sources */,
 				D92563EC2055AD7900A660AE /* CardView.swift in Sources */,
 				D9DE5393205116120093B7D3 /* PlaceTableViewCell.swift in Sources */,
 				D93AFC4820903FE800BBE580 /* PostViewController.swift in Sources */,
@@ -426,6 +436,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -433,6 +444,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -483,6 +495,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -490,6 +503,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -18,8 +18,8 @@ class RPlace: Mappable {
     var defaultImage: String?
     var category: String?
     var images: [String]?
-    var location: [Float]?
-    var rating: Float?
+    var location: [Double]?
+    var rating: Double?
     
     required init(map: Map){
         self.defaultImage = "defaultPhoto"

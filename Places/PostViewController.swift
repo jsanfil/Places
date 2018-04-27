@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Cosmos
 
 class PostViewController: UITableViewController {
 
     var place = RPlace()
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var authorField: UITextField!
+    @IBOutlet weak var ratingField: CosmosView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +28,8 @@ class PostViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "nameSegue" {
-            let destination = segue.destination as! PostViewController // Change to the child view controller
+        if segue.identifier == "categorySegue" {
+            let destination = segue.destination as! CategoryTableViewController
             destination.place = place
         }
     }
@@ -37,5 +41,10 @@ class PostViewController: UITableViewController {
     
     private func updateViewData() {
         print("In updateViewData:", place)
+        nameField.text = place.name ?? ""
+        authorField.text = place.author ?? ""
+        print("Rating", place.rating)
+        print("Place", place.toJSONString())
+        ratingField.rating = place.rating ?? 3.0
     }
 }
