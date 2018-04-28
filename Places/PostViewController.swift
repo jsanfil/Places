@@ -29,6 +29,8 @@ class PostViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        updateModelData()
+        
         if segue.identifier == "categorySegue" {
             let destination = segue.destination as! CategoryTableViewController
             destination.place = place
@@ -49,5 +51,12 @@ class PostViewController: UITableViewController {
         print("Rating", place.rating)
         print("Place", place.toJSONString())
 
+    }
+ 
+    private func updateModelData() {
+        place.name = nameField.text
+        place.author = authorField.text
+        place.rating = ratingField.rating
+        place.category = categoryField.text
     }
 }
