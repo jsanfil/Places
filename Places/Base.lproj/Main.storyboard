@@ -435,6 +435,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="authorField" destination="80w-T8-9Df" id="Yf2-Ha-O3j"/>
+                        <outlet property="categoryField" destination="qU3-mw-C0C" id="Muy-sp-w17"/>
                         <outlet property="nameField" destination="vYm-4Z-3ay" id="uuL-af-oNU"/>
                         <outlet property="ratingField" destination="fxj-mc-Ln4" id="LV1-RK-ieJ"/>
                     </connections>

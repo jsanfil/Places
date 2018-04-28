@@ -15,6 +15,7 @@ class PostViewController: UITableViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var authorField: UITextField!
     @IBOutlet weak var ratingField: CosmosView!
+    @IBOutlet weak var categoryField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,10 @@ class PostViewController: UITableViewController {
         print("In updateViewData:", place)
         nameField.text = place.name ?? ""
         authorField.text = place.author ?? ""
+        ratingField.rating = place.rating ?? 3.0
+        categoryField.text = place.category ?? "Select category"
         print("Rating", place.rating)
         print("Place", place.toJSONString())
-        ratingField.rating = place.rating ?? 3.0
+
     }
 }
