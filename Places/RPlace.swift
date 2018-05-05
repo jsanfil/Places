@@ -23,6 +23,7 @@ class RPlace: Mappable {
     
     required init(map: Map){
         self.defaultImage = "defaultPhoto"
+        self.access = "private"
     }
     
     init () {

@@ -16,6 +16,8 @@ class PostViewController: UITableViewController {
     @IBOutlet weak var authorField: UITextField!
     @IBOutlet weak var ratingField: CosmosView!
     @IBOutlet weak var categoryField: UILabel!
+    @IBOutlet weak var sharingField: UILabel!
+    @IBOutlet weak var imageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,32 @@ class PostViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func imageAction(_ sender: Any) {
+        // create an actionSheet
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // create an action
+        let firstAction: UIAlertAction = UIAlertAction(title: "First Action", style: .default) { action -> Void in
+            
+            print("First Action pressed")
+        }
+        
+        let secondAction: UIAlertAction = UIAlertAction(title: "Second Action", style: .default) { action -> Void in
+            
+            print("Second Action pressed")
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
+        
+        // add actions
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        
+        // present an actionSheet...
+        present(actionSheetController, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         updateModelData()
         
@@ -35,6 +63,11 @@ class PostViewController: UITableViewController {
             let destination = segue.destination as! CategoryTableViewController
             destination.place = place
         }
+        if segue.identifier == "sharingSegue" {
+            let destination = segue.destination as! SharingTableViewController
+            destination.place = place
+        }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +81,7 @@ class PostViewController: UITableViewController {
         authorField.text = place.author ?? ""
         ratingField.rating = place.rating ?? 3.0
         categoryField.text = place.category ?? "Select category"
+        sharingField.text = place.access ?? "Select mode"
         print("Rating", place.rating)
         print("Place", place.toJSONString())
 
@@ -58,5 +92,6 @@ class PostViewController: UITableViewController {
         place.author = authorField.text
         place.rating = ratingField.rating
         place.category = categoryField.text
+        place.access = sharingField.text
     }
 }
