@@ -9,6 +9,7 @@
 import UIKit
 import Cosmos
 import os.log
+import Alamofire
 
 // TODO:
 // - convert images to Kingfisher
@@ -120,4 +121,40 @@ class PostViewController: UITableViewController, UIImagePickerControllerDelegate
         place.access = sharingField.text
         // image name gets set when you change the image in the image button action
     }
+
+    /***
+     private func uploadImage(imageData: UIImageJPEGRepresentation) {
+     Alamofire.upload(multipartFormData: { (multipartFormData) in
+     multipartFormData.append(imageData, withName: "photo_path", fileName: "swift_file.jpeg", mimeType: "image/jpeg")
+     }, to:"http://server1/upload_img.php")
+     { (result) in
+     switch result {
+     case .success(let upload, _, _):
+     
+     upload.uploadProgress(closure: { (Progress) in
+     print("Upload Progress: \(Progress.fractionCompleted)")
+     })
+     
+     upload.responseJSON { response in
+     //self.delegate?.showSuccessAlert()
+     print(response.request)  // original URL request
+     print(response.response) // URL response
+     print(response.data)     // server data
+     print(response.result)   // result of response serialization
+     //                        self.showSuccesAlert()
+     //self.removeImage("frame", fileExtension: "txt")
+     if let JSON = response.result.value {
+     print("JSON: \(JSON)")
+     }
+     }
+     
+     case .failure(let encodingError):
+     //self.delegate?.showFailAlert()
+     print(encodingError)
+     }
+     
+     }
+     }
+    ***/
+
 }
